@@ -40,7 +40,7 @@ apt-mark hold kubelet kubeadm kubectl
 `apt install etcd-client`
 and validate the `etcdctl -v`
 
-3. update docker cgroup driver to systemd in /etc/docker/daemon.json
+3. update docker cgroup driver to `systemd` in /etc/docker/daemon.json
 4. install kube control plane by 
 ```
 kubeadm init --pod-network-cidr=10.208.0.0/16
