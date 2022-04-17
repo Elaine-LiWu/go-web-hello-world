@@ -2,7 +2,7 @@
 hello world sample for docker and kube that created by golang
 
 ## prerequistes
-Install go-1.18.1 on Ubuntu vm
+Install go-1.18.1 on Ubuntu vm (as I'm the root on this vm, there is no sudo in the following cmd)
 
 ## Create go project and the Dockerfile
 1. create the go-web-hello-world src file
@@ -25,5 +25,12 @@ docker login
 docker push elainewu665/go-web-hello-world:v0.1
 ```
 
-## Install kubeadm
+## Install single node clsuter by kubeadm
+### install kubeadm
 
+apt-get update
+apt-get install -y kubelet kubeadm kubectl
+apt-mark hold kubelet kubeadm kubectl
+
+
+update cgroup driver to systemd on /etc/docker/daemon.json
