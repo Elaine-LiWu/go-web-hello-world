@@ -11,7 +11,8 @@ Install go-1.18.1 on Ubuntu vm (as I'm the root on this vm, there is no sudo in 
 go mod init go-web-hello-world
 go mod tidy
 ```
-3. create Dockerfile in the src folder
+3. validate the request by `curl http://127.0.0.1:8081/demo/go-web-hello-world` which reponses Go Web Hello World!
+4. create Dockerfile in the src folder
 
 ## Build docker image
 `docker build -t elainwu665/go-web-hello-world:v0.1 .`
